@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/cadastro.css">
+    <link href="https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonte/fonts.css">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Imagens/FWONK.png">
+    <title>Cadastro F1</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <center>
+                <a class="nav-link text-dark" id="c" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="title" src="~/Imagens/FWONK.png" alt="Logo da Fórmula 1" width="200px" height="-200px">
+                </a>
+            </center>
+        </div>
+    </header>
+    <main>
+        <aside>
+
+            <div class="card">
+                <center>
+                    <br />
+            <h2 style="margin-top:30px;margin-left:-500px;">Crie uma conta:</h2>
+            
+            <div style="margin-top:15px;margin-left:-800px;" class="form1">
+                <input  class="input" id="Nome" type="text" placeholder="Nome completo" required>
+                <span class="input-border"></span>
+            </div>
+                    <br />
+                    <div style="margin-top:-6px;margin-left:-800px;" class="form3">
+                        <input class="input" id="Email" type="text" placeholder="email" required>
+                        <span class="input-border"></span>
+                    </div>
+            <br />
+                    <div style="margin-top:-2px;margin-left:-800px;" class="form5">
+                        <input  class="input" id="Senha" type="password" placeholder="Senha" required>
+                        <span class="input-border"></span>
+                    </div>
+                    <br />
+                    <div style="margin-top:-160px;margin-left:-200px;" class="form2">
+                        <input class="input" id="usuario" type="text" placeholder="Nome do perfil" required>
+                        <span class="input-border"></span>
+                    </div>
+                    <br />
+             <div style="margin-top:-6px;margin-left:-200px;" class="form4">
+                <input  class="input" id="Telefone" type="text" placeholder="telefone" required>
+                <span class="input-border"></span>
+            </div>
+                    
+                    <br />
+             <div style="margin-top:-2px;margin-left:-200px;" class="form6">
+                <input  class="input" id="Endereco" type="text" placeholder="Endereço" required>
+                <span class="input-border"></span>
+            </div>
+                    <br />
+             <div style="margin-top:-6px;margin-left:-500px;" class="form">
+                <input  class="input" id="Senha-confirm" style="width:500px" type="password" placeholder="Confirme sua senha" required>
+                <span class="input-border"></span>
+            </div>
+
+
+             <a class="nav-link text-dark" id="link" asp-area="" asp-controller="Home" asp-action="" style="margin-top: 30px"><button>Cadastrar</button></a>
+            <br />
+            <br />
+                <a class="nav-link text-dark" id="link" asp-area="" asp-controller="Home" asp-action="Entrar" style="margin-top: 30px">Já tem conta?</a>
+                </center>
+            </div>
+           
+        </aside>
+
+        <article>
+            <div class="imagem">
+                <img src="~/Imagens/w11.1.png" alt="Carro de Fórmula 1">
+            </div>
+        </article>
+    </main>
+    <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿@import url(https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold);
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-family: Formula1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -750px;
+    margin-left: -200px;
+}
+.title{
+    margin-left: 150px;
+    margin-top: 275px;
+}
+ul {
+    margin-left: 1200px;
+    margin-top: 300px;
+}
+#u{
+    margin-left:-600px;
+}
+#u {
+    margin-top: 9000px;
+}
+
+aside{
+    margin-top: -10px;
+    margin-left: -1240px;
+}
+article{
+    margin-left: 500px;
+}
+#saiba{
+    margin-left: -200px;
+}
+a {
+    color: rgb(0, 0, 0);
+}
+
+    a:hover {
+        color: rgb(232, 0, 0);
+        transition: 0.4s all;
+    }
+
+#a {
+    border: 3px solid rgb(232, 0, 0);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+    #a:hover {
+        background-color: rgb(232, 0, 0);
+        color: black;
+        transition: 0.3s all;
+    }
+
+#b {
+    border: 3px solid rgb(232, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+    #b:hover {
+        background-color: rgb(232, 0, 0);
+        color: black;
+        transition: 0.3 all;
+    }
+
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.imagem img {
+    margin-top: 100px;
+    margin-left: -450px;
+    width: 800px;
+    height: 300px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 0px;
+    margin-top: 40px;
+    margin-left:-200px;
+}
+
+span {
+    color: rgb(232, 0, 0);
+}
+
+p {
+    line-height: 20px;
+    max-width: 500px;
+    width: 500px;
+    margin-top: 0px;
+    margin-left: -200px;
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: rgb(232, 0, 0);
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(232, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(232, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+    button::before {
+        font-family: Formula1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        border-radius: 15px;
+        background-color: rgb(232, 0, 0);
+        z-index: -1;
+        -webkit-box-shadow: 4px 8px 19px -3px rgba(232,0,0,0.27);
+        box-shadow: 4px 8px 19px -3px rgba(232,0,0,0.27);
+        transition: all 250ms
+    }
+
+    button:hover {
+        color: #e8e8e8;
+    }
+
+        button:hover::before {
+            width: 100%;
+        }

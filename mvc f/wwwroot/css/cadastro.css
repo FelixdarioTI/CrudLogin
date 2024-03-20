@@ -1,0 +1,204 @@
+﻿@import url(https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold);
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Formula1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -430px;
+}
+
+
+
+li {
+    display: inline-block;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+article img {
+    width:600px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+center {
+    margin-top: -200px;
+    margin-left: 500px;
+}
+
+h2 {
+    color: white;
+}
+
+.form {
+    --width-of-input: 500px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+.form1 {
+    margin-top:30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.form2 {
+    margin-top: 30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.form3 {
+    margin-top: 30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.form4 {
+    margin-top: 30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.form5 {
+    margin-top: 30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+.form6 {
+    margin-top: 30px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+
+
+aside {
+    margin-top: 140px;
+    margin-left: -1080px
+}
+
+.input {
+    font-family: Formula1;
+    color: white;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+.input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+input:hover {
+    background: var(--input-hovered-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+    input:focus ~ .input-border {
+        width: 100%;
+    }
+
+#email {
+    margin-top: 20px;
+}
+
+#senha {
+    margin-top: 25px;
+}
+
+aside button {
+    margin-left: -500px;
+    margin-top: 40px;
+    font-family: Formula1;
+    background-color: #f3f7fe;
+    color: rgb(232, 0, 0);
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+#link {
+    margin-left: -500px;
+    color: rgb(232,0,0);
+}
+
+aside button:hover {
+    background-color: rgb(232, 0, 0);
+    box-shadow: 0 0 0 5px #0000005f;
+    color: #fff;
+}
+
+.card {
+    margin-left: 270px;
+    margin-top: 110px;
+    width: 800px;
+    height: 484px;
+    border-radius: 30px;
+    background: rgb(0,0,0);
+    box-shadow: 15px 15px 30px #9d2a2a, -15px -15px 30px #d33232;
+}

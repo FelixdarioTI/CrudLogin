@@ -1,0 +1,9 @@
+@font-face {
+    font-family:"Formula1";
+    src: url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.eot");
+    src: url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5fa59df7bc502c63582850f9f34b9db2.svg#Formula1 Display-Bold Bold")format("svg")
+}
