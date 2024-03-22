@@ -1,0 +1,90 @@
+﻿@model mvc_f.Models.ClassUser
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/cadastro.css">
+    <link href="https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonte/fonts.css">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Imagens/FWONK.png">
+    <title>Cadastro F1</title>
+</head>
+
+<div id="title">
+    <center>
+        <a class="nav-link text-dark" id="c" asp-area="" asp-controller="Home" asp-action="Index">
+            <img class="title" src="~/Imagens/FWONK.png" alt="Logo da Fórmula 1" width="200px" height="-200px">
+        </a>
+    </center>
+</div>
+<aside>
+	
+	<div class="card">
+
+		
+		<div class="row">
+			<div class="col-md-4">
+				<h1 class="titulocard">Faça seu cadastro conosco:</h1>
+				<form asp-action="Create">
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<br />
+					<div  class="form1">
+						<div class="Iputname">
+							<label asp-for="Nome" style="margin-top:-100px;" class="control-label"></label>
+							<input asp-for="Nome" style="margin-top:-100px;" class="input" type="text" id="Nome" class="form-control" />
+							<span asp-validation-for="Nome" style="margin-top:-100px;" class="input-border" class="text-danger"></span>
+						</div>
+						
+					</div>
+					<div class="form2">
+						<label asp-for="Loginusuario" class="control-label"></label>
+						<input asp-for="Loginusuario" type="text" class="input" id="Loginusuario" class="form-control" />
+						<span asp-validation-for="Loginusuario" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form3">
+						<label asp-for="Email" class="control-label"></label>
+						<input asp-for="Email" class="input" type="email" id="Email" class="form-control" />
+						<span asp-validation-for="Email" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form4">
+						<label asp-for="Telefone" class="control-label"></label>
+						<input asp-for="Telefone" class="input" id="Telefone" type="tel" class="form-control" />
+						<span asp-validation-for="Telefone" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form5">
+						<label asp-for="Endereco" class="control-label"></label>
+						<input asp-for="Endereco" class="input" id="Endereco" type="text" class="form-control" />
+						<span asp-validation-for="Endereco" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form6">
+						<label asp-for="Senha" class="control-label"></label>
+						<input asp-for="Senha" class="input" type="password" id="Senha" class="form-control" />
+						<span asp-validation-for="Senha" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form">
+						<label asp-for="SenhaConfirm" class="control-label"></label>
+						<input asp-for="SenhaConfirm" class="input" id="SenhaConfirm" style="width:550px" type="password" class="form-control" />
+						<span asp-validation-for="SenhaConfirm" class="input-border" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+						<br />
+						<a asp-action="Login" class="link">Já tem conta?</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</aside>
+
+        <article>
+            <div class="imagem">
+                <img src="~/Imagens/w11.1.png" alt="Carro de Fórmula 1">
+            </div>
+        </article>
+    </main>
+</div>
+
+
+</html>

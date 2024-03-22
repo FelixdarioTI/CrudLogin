@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using mvc_f.NovaPasta1;
+
 namespace mvc_f
 {
     public class Program
@@ -6,6 +9,10 @@ namespace mvc_f
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<Contexto>
+                (options => options.UseMySql(
+                    "server=localhost;initial catalog=Crud_User;uid=root;pwd=Felix",
+                    ServerVersion.Parse("8.0.36-mysql")));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -28,7 +35,7 @@ namespace mvc_f
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=ClassUsers}/{action=Index}/{id?}");
 
             app.Run();
         }

@@ -1,0 +1,28 @@
+﻿@import url(https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold);
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Formula1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+button {
+    margin-left: -500px;
+    margin-top: 40px;
+    font-family: Formula1;
+    background-color: #f3f7fe;
+    color: rgb(232, 0, 0);
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: rgb(232, 0, 0);
+    box-shadow: 0 0 0 5px #0000005f;
+    color: #fff;
+}

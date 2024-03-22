@@ -42,7 +42,30 @@ center{
 h2{
     color:white;
 }
+.inputs{
+    margin-left: 20px;
+}
+label{
+    color: white;
+}
+#emaillabel {
+    margin-left: -55px;
+}
+#senhalabel{
+    margin-left: -63px;
+}
 .form {
+    margin-top: 60px;
+    --width-of-input: 200px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(232,0,0);
+    --input-hovered-color: #4985e01f;
+    position: relative;
+    width: var(--width-of-input);
+}
+.form2 {
+    margin-top: 40px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -90,14 +113,9 @@ input:focus {
         width: 100%;
     }
     
-    #email{
-        margin-top:20px;
-    }
-    #senha{
-        margin-top: 25px;
-    }
 aside button {
-    margin-top:40px;
+    margin-top:50px;
+    margin-left:10px;
     font-family: Formula1;
     background-color: #f3f7fe;
     color: rgb(232, 0, 0);
@@ -107,9 +125,9 @@ aside button {
     height: 45px;
     transition: .3s;
 }
-#link{
-    margin-left: 30px;
-    color:rgb(232,0,0);
+#link {
+    margin-top: 50px;
+    color: rgb(232,0,0);
 }
     aside button:hover {
         background-color: rgb(232, 0, 0);

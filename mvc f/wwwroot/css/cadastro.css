@@ -14,11 +14,13 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: -430px;
+
 }
 
 
-
+.title{
+    margin-top: -25px;
+}
 li {
     display: inline-block;
     margin: 10px;
@@ -27,7 +29,7 @@ li {
 main {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
 article img {
@@ -44,8 +46,14 @@ center {
 h2 {
     color: white;
 }
-
+.titulocard{
+    color:white;
+    margin-left: 200px;
+    margin-top:-120px;
+}
 .form {
+    margin-left:100px;
+    margin-top:30px;
     --width-of-input: 500px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -54,8 +62,14 @@ h2 {
     position: relative;
     width: var(--width-of-input);
 }
+
+.link {
+    color: rgb(232,0,0);
+    margin-left:330px;
+}
 .form1 {
     margin-top:30px;
+    margin-left: 100px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -66,7 +80,8 @@ h2 {
 }
 
 .form2 {
-    margin-top: 30px;
+    margin-top: -55px;
+    margin-left:450px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -77,7 +92,9 @@ h2 {
 }
 
 .form3 {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left:100px;
+
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -88,7 +105,8 @@ h2 {
 }
 
 .form4 {
-    margin-top: 30px;
+    margin-left: 450px;
+    margin-top: -55px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -99,7 +117,8 @@ h2 {
 }
 
 .form5 {
-    margin-top: 30px;
+    margin-left: 450px;
+    margin-top: 20px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -110,7 +129,8 @@ h2 {
 }
 
 .form6 {
-    margin-top: 30px;
+    margin-top: -58px;
+    margin-left: 100px;
     --width-of-input: 200px;
     --border-height: 1px;
     --border-before-color: rgba(221, 221, 221, 0.39);
@@ -120,7 +140,9 @@ h2 {
     width: var(--width-of-input);
 }
 
-
+label{
+    color:white;
+}
 aside {
     margin-top: 140px;
     margin-left: -1080px
@@ -170,8 +192,8 @@ input:focus {
 }
 
 aside button {
-    margin-left: -500px;
-    margin-top: 40px;
+    margin-left: 340px;
+    margin-top: 13px;
     font-family: Formula1;
     background-color: #f3f7fe;
     color: rgb(232, 0, 0);
@@ -195,7 +217,7 @@ aside button:hover {
 
 .card {
     margin-left: 270px;
-    margin-top: 110px;
+    margin-top: -170px;
     width: 800px;
     height: 484px;
     border-radius: 30px;

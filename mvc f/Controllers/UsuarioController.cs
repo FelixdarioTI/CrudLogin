@@ -1,28 +1,42 @@
-﻿namespace mvc_f.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
+namespace mvc_f.Controllers
 {
 
-    using System.Linq;
-
-    public class UsuarioRepository
+    [ApiController]
+    [Route("api/[controller]")]
+    public class RegistroController : ControllerBase
     {
-        private static List<Usuario> usuarios = new List<Usuario>();
-        private static int nextId = 1;
-
-        public void CadastrarUsuario(Usuario usuario)
+        [HttpPost]
+        public IActionResult RegistrarUsuario([FromBody] UsuarioDTO usuario)
         {
-            usuario.Id = nextId++;
-            usuarios.Add(usuario);
-        }
+            if (string.IsNullOrWhiteSpace(usuario.Nome))
+                return BadRequest("O nome é obrigatório.");
 
-        public Usuario FazerLogin(string email, string senha)
-        {
-            return usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
-        }
+            if (string.IsNullOrWhiteSpace(usuario.Email))
+                return BadRequest("O email é obrigatório.");
 
-        public bool UsuarioJaExiste(string email)
-        {
-            return usuarios.Any(u => u.Email == email);
+
+            try
+            {
+                return Ok("Usuário registrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Ocorreu um erro ao processar o registro do usuário.");
+            }
         }
+    }
+
+    public class UsuarioDTO
+    {
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+        public string Loginusuario { get; set; }
+        public string Telefone { get; set; }
+        public string Endereco { get; set; }
+        public string SenhaConfirm { get; set; }
     }
 
 }

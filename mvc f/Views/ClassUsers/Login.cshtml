@@ -1,0 +1,73 @@
+﻿@model mvc_f.Models.ClassUser
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css">
+    <link href="https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonte/fonts.css">
+    <link rel="shortcut icon" type="imagex/png" href="~/Imagens/FWONK.png">
+    <title>Login F1</title>
+</head>
+<body>
+
+    <header>
+        <div id="title">
+            <center>
+                <a class="nav-link text-dark" id="c" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="title" src="~/Imagens/FWONK.png" alt="Logo da Fórmula 1" width="200px" height="-200px">
+                </a>
+            </center>
+        </div>
+    </header>
+
+    <main>
+        <center>
+            <aside>
+                <div class="card">
+                    <br />
+                    <h2 style="margin-top:30px">Entre em uma conta:</h2>
+                    <form asp-action="Login" >
+                        <div class="inputs">
+                            <div class="form">
+                                <label asp-action="Email" id="emaillabel" class="control-label">Email</label>
+                                <input class="input" type="email" id="Email" name="email" />
+                                <span class="input-border"></span>
+                            </div>
+                            <div class="form2">
+                                <label asp-action="Senha" id="senhalabel" class="control-label">Senha</label>
+                                <input class="input" type="password" id="senha" name="senha" />
+                                <span class="input-border"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Login</button>
+<br />
+                            <a class="nav-link text-dark" id="link"  asp-action="Create" style="margin-top: 20px;margin-left: 3px">Não tem conta?</a>
+                        </div>
+                    </form>
+
+                    
+                    
+                </div>
+
+
+
+
+
+            </aside>
+        </center>
+
+
+        <article>
+
+            <img src="~/Imagens/aaaaaaaaaaa.png" alt="Carro de Fórmula 1" width="725px">
+
+        </article>
+    </main>
+
+
+</body>
+</html>

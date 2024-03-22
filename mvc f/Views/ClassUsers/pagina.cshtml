@@ -1,0 +1,86 @@
+﻿@model List<ClassUser>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/paginas.css">
+    <link rel="stylesheet" href="~/css/media.css">
+    <link href="https://db.onlinewebfonts.com/c/5fa59df7bc502c63582850f9f34b9db2?family=Formula1+Display-Bold+Bold" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonte/fonts.css">
+
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="imagex/png" href="~/Imagens/FWONK.png">
+    <title>F1</title>
+</head>
+<body>
+    <header>
+        <img class="title" src="~/Imagens/FWONK.png" alt="Logo da Fórmula 1" width="200px" height="-200px">
+    </header>
+    <main>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Nome)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Loginusuario)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Email)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Telefone)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Endereco)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].Senha)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model[0].SenhaConfirm)
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var user in Model)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => user.Nome)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.Loginusuario)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.Email)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.Telefone)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.Endereco)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.Senha)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => user.SenhaConfirm)
+						</td>
+						<td>
+							<a asp-action="Edit" asp-route-id="@user.Id">Editar</a> |
+							<a asp-action="Details" asp-route-id="@user.Id">Detalhes</a> |
+							<a asp-action="Delete" asp-route-id="@user.Id">Deletar</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+        </table>
+            
+    </main>
+</body>
+</html>

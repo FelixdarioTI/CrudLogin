@@ -22,6 +22,19 @@ namespace mvc_f.Controllers
         {
             return View();
         }
+        public IActionResult Site()
+        {
+            return View();
+        }
+
+        public IActionResult Entrar()
+        {
+            return View();
+        }
+        public IActionResult Loja()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

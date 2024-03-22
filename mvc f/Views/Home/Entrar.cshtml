@@ -33,12 +33,14 @@
                 <span class="input-border"></span>
             </div>
             <div class="form">
-                <input class="input" id="senha" type="text" placeholder="Senha">
+                <input class="input" id="senha" type="password" placeholder="Senha">
                 <span class="input-border"></span>
             </div>
                     </div>
+                    <div id="mensagem-erro" style="color: red"></div>
                     <label>
-            <a class="nav-link text-dark" id="entrar" asp-area="" asp-controller="Home" asp-action="Site"><button>Entrar</button></a>
+                       
+                        <button onclick="fazerLogin()">Entrar</button>
             <br />
                     </label>
             <label>
@@ -47,6 +49,10 @@
              
                     </label>
             </div>
+                
+               
+
+            
 
         </aside>
         </center>
@@ -58,6 +64,7 @@
   
         </article>
     </main>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/script.js"></script>
 </body>
 </html>

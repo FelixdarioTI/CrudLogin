@@ -14,3 +14,27 @@ function slider() {
 }
 
 setInterval(slider, 2000);
+function enviarFormulario() {
+    var dados = {
+        Nome: $('#Nome').val(),
+        Email: $('#Email').val(),
+        Senha: $('#Senha').val(),
+        Loginusuario: $('#Loginusuario').val(),
+        Telefone: $('#Telefone').val(),
+        Endereco: $('#Endereco').val(),
+        SenhaConfirm: $('#Senha-confirm').val()
+    };
+
+    $.ajax({
+        url: '/api/Registro',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(dados),
+        success: function (response) {
+            console.log(response);
+        },
+        error: function (xhr, status, error) {
+            $('#mensagem-erro').text("Erro");
+        }
+    });
+}
