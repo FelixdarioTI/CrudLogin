@@ -224,3 +224,7 @@ aside button:hover {
     background: rgb(0,0,0);
     box-shadow: 15px 15px 30px #9d2a2a, -15px -15px 30px #d33232;
 }
+.text-danger {
+    color: rgb(0, 0, 0);
+    margin-left: 40%;
+}

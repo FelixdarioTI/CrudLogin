@@ -45,6 +45,7 @@
   <ItemGroup>
     <Content Remove="wwwroot\css\loja.css" />
     <Content Remove="wwwroot\css\pagina.css" />
+    <Content Remove="wwwroot\css\paginas.css" />
     <Content Remove="wwwroot\css\site.css" />
     <Content Remove="wwwroot\css\style.css" />
   </ItemGroup>

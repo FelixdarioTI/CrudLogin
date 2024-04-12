@@ -19,7 +19,6 @@
     </center>
 </div>
 <aside>
-	
 	<div class="card">
 
 		
@@ -29,14 +28,6 @@
 				<form asp-action="Create">
 					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<br />
-					<div  class="form1">
-						<div class="Iputname">
-							<label asp-for="Nome" style="margin-top:-100px;" class="control-label"></label>
-							<input asp-for="Nome" style="margin-top:-100px;" class="input" type="text" id="Nome" class="form-control" />
-							<span asp-validation-for="Nome" style="margin-top:-100px;" class="input-border" class="text-danger"></span>
-						</div>
-						
-					</div>
 					<div class="form2">
 						<label asp-for="Loginusuario" class="control-label"></label>
 						<input asp-for="Loginusuario" type="text" class="input" id="Loginusuario" class="form-control" />
@@ -51,11 +42,6 @@
 						<label asp-for="Telefone" class="control-label"></label>
 						<input asp-for="Telefone" class="input" id="Telefone" type="tel" class="form-control" />
 						<span asp-validation-for="Telefone" class="input-border" class="text-danger"></span>
-					</div>
-					<div class="form5">
-						<label asp-for="Endereco" class="control-label"></label>
-						<input asp-for="Endereco" class="input" id="Endereco" type="text" class="form-control" />
-						<span asp-validation-for="Endereco" class="input-border" class="text-danger"></span>
 					</div>
 					<div class="form6">
 						<label asp-for="Senha" class="control-label"></label>
@@ -76,6 +62,10 @@
 			</div>
 		</div>
 	</div>
+	@if (!ViewData.ModelState.IsValid)
+	{
+		@Html.ValidationMessage("ErroCreate", new { @class = "text-danger" })
+	}
 </aside>
 
         <article>

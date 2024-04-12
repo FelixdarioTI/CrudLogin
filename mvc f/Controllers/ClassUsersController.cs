@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using mvc_f.Models;
 using mvc_f.NovaPasta1;
 
@@ -58,24 +59,52 @@ namespace mvc_f.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha,Loginusuario,Telefone,Endereco,SenhaConfirm")] ClassUser classUser)
+        public async Task<IActionResult> Create(string senha, string SenhaConfirm, string Email, string email, [Bind("Id,Email,Loginusuario,Telefone,Senha,Endereco,Complemento,CEP")] ClassUser classUser)
         {
+            var user = await _context.ClassUser.FirstOrDefaultAsync(u => u.SenhaConfirm == SenhaConfirm && u.Senha == senha && u.Email == Email && u.email == email);
+            bool emailJaCadastrado = VerificarEmailCadastrado(Email, user);
             if (ModelState.IsValid)
             {
                 _context.Add(classUser);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Login));
+                if (user != null && senha == SenhaConfirm)
+                {
+                    if (emailJaCadastrado)
+                    {
+                        return RedirectToAction(nameof(Login));
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("ErroEmail", "Email já cadastrado.");
+                        return View();
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("ErroSenha", "As senhas não coincidem.");
+                    return View();
+                }
+
+
+
             }
             return View(classUser);
         }
+        public async Task<bool> VerificarEmailCadastrado(string email)
+        {
+            
+            var user = await _context.ClassUser.FirstOrDefaultAsync(u => u.Email == email);
+            return user != null;
+        }
+
 
 
         public IActionResult Login()
         {
             return View();
         }
-
-        [HttpPost]
+    
+    [HttpPost]
         public async Task<IActionResult> Login(string email, string senha)
         {
             var user = await _context.ClassUser.FirstOrDefaultAsync(u => u.Email == email && u.Senha == senha);
@@ -117,7 +146,7 @@ namespace mvc_f.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,Loginusuario,Telefone,Endereco,SenhaConfirm")] ClassUser classUser)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Email,Loginusuario,Telefone,Senha,Endereco,Complemento,CEP")] ClassUser classUser)
         {
             if (id != classUser.Id)
             {
